@@ -63,6 +63,9 @@ var getFile = function(url) {
     console.log('hats');
   });
   console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
+  setTimeout((function() {
+  console.log('hello world!');
+}), 5000);
 };
 
 var clone = function(fn) {
