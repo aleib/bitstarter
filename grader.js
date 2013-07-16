@@ -59,7 +59,8 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 var getFile = function(url) {
   console.log(url); 
   restler.get(url).on('complete', function(response, status) { 
-    console.log(response); 
+    // return response; 
+    console.log('hats');
   });
   console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
 };
