@@ -49,9 +49,9 @@ var loadChecks = function(checksfile) {
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
-  console.log('checkHtmlFile');
-  console.log(htmlfile);
-  console.log(checksfile);
+  // console.log('checkHtmlFile');
+  // console.log(htmlfile);
+  // console.log(checksfile);
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {};
@@ -63,19 +63,19 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 var getFile = function(url) {
-  console.log(url); 
+  // console.log(url); 
   restler.get(url).on('complete', function(response, status) { 
     // return response; 
-    console.log('hats');
-       console.log(response);
-       console.log(status);
+    // console.log('hats');
+    //    console.log(response);
+    //    console.log(status);
      if (status instanceof Error) {
       console.log('Error: ' + result.message);
       process.exit(1);
     } else {
-       console.log('hats2');
-       console.log(response);
-       console.log(status);
+       // console.log('hats2');
+       // console.log(response);
+       // console.log(status);
        var checkJson = checkHtmlFile(response, program.checks);
       var outJson = JSON.stringify(checkJson, null, 4);
       console.log(outJson);
