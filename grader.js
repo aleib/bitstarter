@@ -66,11 +66,14 @@ var getFile = function(url) {
   console.log(url); 
   restler.get(url).on('complete', function(response, status) { 
     // return response; 
-     if (result instanceof Error) {
+    console.log('hats');
+       console.log(response);
+       console.log(status);
+     if (status instanceof Error) {
       console.log('Error: ' + result.message);
       process.exit(1);
     } else {
-       console.log('hats');
+       console.log('hats2');
        console.log(response);
        console.log(status);
        var checkJson = checkHtmlFile(response, program.checks);
