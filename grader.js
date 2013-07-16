@@ -39,7 +39,8 @@ var assertFileExists = function(infile) {
 };
 
 var cheerioHtmlFile = function(htmlfile) {
-    return cheerio.load(fs.readFileSync(htmlfile));
+  console.log(htmlfile);
+    return cheerio.load(htmlfile);
 };
 
 var loadChecks = function(checksfile) {
