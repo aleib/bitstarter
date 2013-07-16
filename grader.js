@@ -71,6 +71,11 @@ var getFile = function(url) {
       process.exit(1);
     } else {
        console.log('hats');
+       console.log(response);
+       console.log(status);
+       var checkJson = checkHtmlFile(response, program.checks);
+      var outJson = JSON.stringify(checkJson, null, 4);
+      console.log(outJson);
     }
    
   });
@@ -89,9 +94,7 @@ if(require.main == module) {
         // .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-f, --url <url>', 'Path to index.html', clone(getFile), HTMLFILE_DEFAULT)
         .parse(process.argv);
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+    
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
