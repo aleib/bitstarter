@@ -3,10 +3,16 @@ var express = require('express');
 var fs = require('fs');
 
 var app = express.createServer(express.logger());
-var buffer = new Buffer(fs.readFile("index.html"));
+
+
+function getString(){
+		var buffer = new Buffer(fs.readFile("index.html"));
+		return buffer.toString("utf-8");
+};
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf-8"));
+	var strng = getString();
+  response.send(strng);
 });
 
 var port = process.env.PORT || 5000;
