@@ -25,6 +25,7 @@ var fs = require('fs');
 var program = require('commander');
 var cheerio = require('cheerio');
 var restler = require('restler');
+var sleep = require('sleep');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
 
@@ -63,9 +64,7 @@ var getFile = function(url) {
     console.log('hats');
   });
   console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
-  setTimeout((function() {
-  console.log('hello world!');
-}), 5000);
+  sleep.sleep(5);
   console.log('hello world2!');
 };
 
