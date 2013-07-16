@@ -39,8 +39,8 @@ var assertFileExists = function(infile) {
 };
 
 var cheerioHtmlFile = function(htmlfile) {
-console.log('cheerioHtmlFile');
-  console.log(htmlfile);
+// console.log('cheerioHtmlFile');
+//   console.log(htmlfile);
     return cheerio.load(htmlfile);
 };
 
