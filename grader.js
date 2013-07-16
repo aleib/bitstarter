@@ -57,11 +57,11 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 };
 
 var getFile = function(url) {
-  console.log(url); 
+  console.log('hat'); 
   restler.get(url).on('complete', function(response, status) { 
     console.log(response); 
   }
-  console.log("This will print while the webpage is being fetched unless the URL fetch is finished already.");
+  console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
 };
 
 var clone = function(fn) {
