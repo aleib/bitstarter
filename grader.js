@@ -66,6 +66,7 @@ var getFile = function(url) {
   setTimeout((function() {
   console.log('hello world!');
 }), 5000);
+  console.log('hello world2!');
 };
 
 var clone = function(fn) {
