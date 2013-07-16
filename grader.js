@@ -49,6 +49,9 @@ var loadChecks = function(checksfile) {
 };
 
 var checkHtmlFile = function(htmlfile, checksfile) {
+  console.log('checkHtmlFile');
+  console.log(htmlfile);
+  console.log(checksfile);
     $ = cheerioHtmlFile(htmlfile);
     var checks = loadChecks(checksfile).sort();
     var out = {};
