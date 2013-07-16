@@ -72,8 +72,6 @@ var getFile = function(url) {
    
   });
   console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
-  sleep.sleep(5);
-  console.log('hello world2!');
 };
 
 var clone = function(fn) {
@@ -86,7 +84,7 @@ if(require.main == module) {
     program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         // .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-        .option('-u, --url <url>', 'URL Path', clone(getFile), HTMLFILE_DEFAULT)
+        .option('-f, --url <url>', 'Path to index.html', clone(getFile), HTMLFILE_DEFAULT)
         .parse(process.argv);
     var checkJson = checkHtmlFile(program.file, program.checks);
     var outJson = JSON.stringify(checkJson, null, 4);
