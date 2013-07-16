@@ -61,7 +61,13 @@ var getFile = function(url) {
   console.log(url); 
   restler.get(url).on('complete', function(response, status) { 
     // return response; 
-    console.log('hats');
+     if (result instanceof Error) {
+      console.log('Error: ' + result.message);
+      process.exit(1);
+    } else {
+       console.log('hats');
+    }
+   
   });
   console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
   sleep.sleep(5);
