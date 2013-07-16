@@ -82,7 +82,7 @@ var getFile = function(url) {
     }
    
   });
-  console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
+  // console.log("This will print while the webpage is being fetched unless the abcdefg abcdefg URL fetch is finished already.");
 };
 
 var clone = function(fn) {
